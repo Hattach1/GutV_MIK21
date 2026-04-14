@@ -1,0 +1,45 @@
+Best model: linear_svc
+Best macro F1: 0.9236
+
+=== logistic_regression ===
+Accuracy: 0.9038
+Macro F1: 0.9016
+              precision    recall  f1-score   support
+
+        high       0.92      0.94      0.93        35
+         low       0.87      1.00      0.93        34
+      medium       0.93      0.77      0.84        35
+
+    accuracy                           0.90       104
+   macro avg       0.91      0.90      0.90       104
+weighted avg       0.91      0.90      0.90       104
+
+
+=== linear_svc ===
+Accuracy: 0.9231
+Macro F1: 0.9236
+              precision    recall  f1-score   support
+
+        high       0.97      0.94      0.96        35
+         low       0.94      0.91      0.93        34
+      medium       0.86      0.91      0.89        35
+
+    accuracy                           0.92       104
+   macro avg       0.92      0.92      0.92       104
+weighted avg       0.92      0.92      0.92       104
+
+
+=== random_forest ===
+Accuracy: 0.9038
+Macro F1: 0.9041
+              precision    recall  f1-score   support
+
+        high       0.97      0.94      0.96        35
+         low       0.89      0.91      0.90        34
+      medium       0.86      0.86      0.86        35
+
+    accuracy                           0.90       104
+   macro avg       0.90      0.90      0.90       104
+weighted avg       0.90      0.90      0.90       104
+
+

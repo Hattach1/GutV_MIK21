@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Content Effectiveness Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="page">
+        <header class="page-header">
+            <h1>Анализ эффективности текста</h1>
+            <p>
+                Введите рекламный заголовок или короткий текст, чтобы получить
+                классификацию, оценки и рекомендации.
+            </p>
+        </header>
+
+        <main class="layout">
+            <section class="panel input-panel">
+                <label for="text-input" class="label">Текст для анализа</label>
+                <textarea
+                    id="text-input"
+                    placeholder="Например: Смартфон с батареей, которая держится до двух дней без подзарядки"
+                ></textarea>
+
+                <div class="actions">
+                    <button id="analyze-btn">Проанализировать</button>
+                    <button id="fill-example-btn" class="secondary">Подставить пример</button>
+                </div>
+
+                <p id="status" class="status"></p>
+            </section>
+
+            <section class="panel result-panel">
+                <div id="empty-state" class="empty-state">
+                    Результат анализа появится здесь.
+                </div>
+
+                <div id="result-content" class="hidden">
+                    <div class="result-top">
+                        <div class="card">
+                            <h3>Класс</h3>
+                            <p id="predicted-class" class="big-text">—</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Общая оценка</h3>
+                            <p id="overall-score" class="big-text">—</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Объяснение модели</h3>
+                        <p id="model-explanation">—</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Вероятности / уверенность</h3>
+                        <div id="probabilities"></div>
+                    </div>
+
+                    <div class="scores-grid">
+                        <div class="card">
+                            <h3>Readability</h3>
+                            <p id="readability-score">—</p>
+                        </div>
+                        <div class="card">
+                            <h3>Emotional</h3>
+                            <p id="emotional-score">—</p>
+                        </div>
+                        <div class="card">
+                            <h3>Engagement</h3>
+                            <p id="engagement-score">—</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Ключевые слова</h3>
+                        <div id="keywords" class="tag-list"></div>
+                    </div>
+
+                    <div class="double-grid">
+                        <div class="card">
+                            <h3>Сильные стороны</h3>
+                            <ul id="strengths"></ul>
+                        </div>
+                        <div class="card">
+                            <h3>Слабые стороны</h3>
+                            <ul id="weaknesses"></ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Рекомендации</h3>
+                        <ul id="recommendations"></ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Краткая сводка признаков</h3>
+                        <div id="feature-summary" class="summary-grid"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
